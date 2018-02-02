@@ -17,9 +17,6 @@ public class common {
 	@BeforeClass
 	public void setup() {
 		configProperty = new JavaManager("src/test/resources/config.properties");
-		//configProperty.setProperties("Browser", "Chrome");
-		//configProperty.setProperties("URL", "http://automationpractice.com/index.php");
-		//configProperty.setProperties("DemoMode", "true");
 		mylib = new TestLibrary(driver);
 	}
 	
