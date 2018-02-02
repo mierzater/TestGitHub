@@ -18,5 +18,15 @@ public class DemoTest extends common{
 		driver.findElement(By.className("primary")).click();;
 		
 	}
+	
+	@Test
+	public void testCostco1() throws InterruptedException {
+		driver.findElement(By.id("cart-d")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("footer-search-field")).sendKeys("123123@gmail.com");
+		driver.findElement(By.id("footer-email-offers")).sendKeys("123123");
+		driver.findElement(By.xpath("//*[@id=\"EmailOffersForm\"]/div/span/button")).click();
+		
+	}
 
 }
