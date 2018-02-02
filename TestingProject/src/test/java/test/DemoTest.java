@@ -18,7 +18,7 @@ public class DemoTest extends common{
 		driver.findElement(By.className("primary")).click();;
 		
 	}
-	
+	// add new line
 	@Test
 	public void testCostco1() throws InterruptedException {
 		driver.findElement(By.id("cart-d")).click();
