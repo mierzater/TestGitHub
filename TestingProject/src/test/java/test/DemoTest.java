@@ -1,9 +1,11 @@
 package test;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import library.common;
+import myLibrary.common;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 public class DemoTest extends common{
 	

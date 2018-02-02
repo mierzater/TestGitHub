@@ -1,4 +1,4 @@
-package library;
+package myLibrary;
 
 import static org.testng.Assert.assertTrue;
 

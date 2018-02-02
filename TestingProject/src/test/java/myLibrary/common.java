@@ -1,4 +1,4 @@
-package library;
+package myLibrary;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
