@@ -2,12 +2,15 @@ package myLibrary;
 
 import static org.testng.Assert.assertTrue;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class TestLibrary {
 	
@@ -24,7 +27,8 @@ public class TestLibrary {
 		String browserName = configproperty.readProperty("Browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-			driver = new ChromeDriver();
+			DesiredCapabilities capabilities1 = DesiredCapabilities.chrome();
+			driver = new RemoteWebDriver (new URL("http://localhost:4444/wd/hub"),capabilities1);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\geckodriver.exe");
 			driver = new FirefoxDriver();
