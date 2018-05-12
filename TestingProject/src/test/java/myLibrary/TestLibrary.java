@@ -27,8 +27,9 @@ public class TestLibrary {
 		String browserName = configproperty.readProperty("Browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-			DesiredCapabilities capabilities1 = DesiredCapabilities.chrome();
-			driver = new RemoteWebDriver (new URL("http://localhost:4444/wd/hub"),capabilities1);
+			driver = new ChromeDriver();
+			//DesiredCapabilities capabilities1 = DesiredCapabilities.chrome();
+			//driver = new RemoteWebDriver (new URL("http://localhost:4444/wd/hub"),capabilities1);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\geckodriver.exe");
 			driver = new FirefoxDriver();
